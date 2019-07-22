@@ -1,11 +1,10 @@
 # Modified matplotlib default settings
 
-Include this file in the same directory where the Python file used for producing the plots is located (i.e., the file that contains *import matplotlib*) 
-```python
-import matplotlib
-```
+The file *matplotlibrc* given in repository contains modified matplotlib settings for producing publication-ready plots. Download this file, and include it in the same directory where the Python file used for producing the plots is located. Do not change the file name.
 
-You may need to restart the kernel after modifying the file *matplotlibrc* to make sure the changes are reflected in the subsequent plots.
+The modifications to the default values represent my personal preferences; you may need to modify it further to adapt to your own needs/preferences. If you do change any setting in the file *matplotlibrc*, you may need to restart the kernel to make sure that these changes are reflected in the subquesent plots.
+
+The following settings have been modified in comparison to the matplotlib default values:
 
 ### Figure and axes:
 

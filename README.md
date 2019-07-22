@@ -1,8 +1,23 @@
-# mod_matplotlib_defaults
+# Modified matplotlib default settings
+
+Include this file in the same directory where the Python file used for producing the plots is located (i.e., the file that contains *import matplotlib*) 
+```python
+import matplotlib
+```
+
+You may need to restart the kernel after modifying the file *matplotlibrc* to make sure the changes are reflected in the subsequent plots.
 
 ### Figure and axes:
 
-* Figure size (**figure.figsize**): changed from 6.4 x 4.8 inches to 3.5 x 1.5 inches. This figure size may seem too small in a matplotlib window; however, it is the ideal size for double-column articles (you may need to adjust the figure height according to your dataset -- use *plt.figure(figsize=(3.5, new_height))*, where *new_height* is the desired figure height in inches). If your figure spans both columns, increase its width from 3.5 to 7.0625 inches (*plt.figure(figsize=(7.0625, new_height))*).
+* Figure size (**figure.figsize**): changed from 6.4 x 4.8 inches to 3.5 x 1.5 inches. This figure size may seem too small in a matplotlib window; however, it is the ideal size for double-column articles. You may need to adjust the figure height according to your dataset:
+```python 
+plt.figure(figsize=(3.5, new_height))
+```
+
+where *new_height* is the desired figure height in inches). If your figure spans both columns, increase its width from 3.5 to 7.0625 inches:
+```python 
+plt.figure(figsize=(7.0625, new_height))
+```
 
 * Tight layout (**figure.constrained_layout.use**): changed from *False* to *True*. It adjusts all plots elements so that the white space between the axes and the figure frame is reduced. The amount of horizontal and vertical padding is controlled by **figure.constrained_layout.h_pad** and **figure.constrained_layout.w_pad**, respectively, which were changed from 0.04167 (3 points) to 0.01389 (1 point);
 
@@ -26,13 +41,19 @@
 
 ### Grids and ticks:
 
-* Display major grids (**axes.grid**): changed from *False* to *True* (to turn off the grids for a specific figure, use *plt.grid(False)* after the figure creation);
+* Display major grids (**axes.grid**): changed from *False* to *True*; to turn off the grids for a specific figure, insert the following line of code after the figure creation:
+```python
+plt.grid(False)
+```
 
 * Grid line width (**grid.linewidth**): changed from 0.8 to 0.5 points;
 
 * Grid transparency (**grid.alpha**): changed from 1.0 to 0.3;
 
-* Draw ticks on the top and right spines (**xtick.top** and **ytick.rigth**): changed from *False* to *True* (to turn off this behavior for a specific figure, use *plt.gca().tick_params(top=False, right=False)* after the figure creation);
+* Draw ticks on the top and right spines (**xtick.top** and **ytick.rigth**): changed from *False* to *True*; to turn off this behavior for a specific figure, insert the following line of code after the figure creation:
+```python
+plt.gca().tick_params(top=False, right=False)
+```
 
 * Major ticks width (**xtick.major.width** and **ytick.major.width**): changed from 0.8 to 0.5 points;
 

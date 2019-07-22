@@ -34,12 +34,12 @@
 
 * Draw ticks on the top and right spines (**xtick.top** and **ytick.rigth**): changed from *False* to *True* (to turn off this behavior for a specific figure, use *plt.gca().tick_params(top=False, right=False)* after the figure creation);
 
-* Major ticks width (**xtick.major.width** and **ytick.major.width**): change from 0.8 to 0.5 points;
+* Major ticks width (**xtick.major.width** and **ytick.major.width**): changed from 0.8 to 0.5 points;
 
 * Ticks direction (**xtick.direction** and **ytick.direction**): change from *out* to *in*.
 
 ### Text:
 
-* Text font family (**font.family**): change from *sans-serif* to *serif*;
+* Text font family (**font.family**): changed from *sans-serif* to *serif*;
 
-* Text font size (**font.size**): change from 10 to 6 points.
+* Text font size (**font.size**): changed from 10 to 6 points.

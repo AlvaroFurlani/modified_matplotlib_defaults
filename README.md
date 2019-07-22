@@ -1,5 +1,8 @@
 # mod_matplotlib_defaults
 
+## Figure:
+
+
 * Line width of the graphs (**lines.linewidth**): change from 1.5 to 0.75 points;
 * Line width of the edges around markers (**lines.markeredgewidth**): change from 1.0 to 0.2 points;
 * Line width of the borders of patch objects (**patch.linewidth**): change from 1.0 to 0.5 points;

@@ -4,8 +4,7 @@
 
 * Figure size (**figure.figsize**): change from 6.4 x 4.8 inches to 3.5 x 1.5 inches. This figure size may seem too small in a matplotlib window; however, it is the ideal size for double-column articles (you may need to adjust the figure height according to your dataset -- use *plt.figure(figsize=(3.5, new_height))*, where *new_height* is the desired figure height in inches). If your figure spans both columns, increases its width from 3.5 to 7.0625 inches (*plt.figure(figsize=(7.0625, new_height))*).
 
-
-* Tight layout (**figure.constrained_layout.use**): change from *False* to *True* (it makes the plot elements to fit on the figure area, removing unecessary white space around the axes). The padding is controlled by **figure.constrained_layout.h_pad** and **figure.constrained_layout.w_pad**, which were changed from 0.04167 (3 points) to 0.01389 (1 point);
+* Tight layout (**figure.constrained_layout.use**): change from *False* to *True*. It adjusts all plots elements so that the white space between the axes and the figure frame are reduced. The amount of padding is controlled by **figure.constrained_layout.h_pad** and **figure.constrained_layout.w_pad**, which were changed from 0.04167 (3 points) to 0.01389 (1 point);
 
 ### Legend:
 

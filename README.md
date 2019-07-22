@@ -7,3 +7,13 @@
 * Text font size (**font.size**): change from 10 to 6 points;
 * Line width of axes edge (**axes.linewidth**): change from 0.8 to 0.5 points;
 * Display axis grid (**axes.grid**): change from *False* to *True* (to turn off the grids for a specific figure, use *plt.grid(False)* after the figure creation);
+* Grid line width (**grid.linewidth**): change from 0.8 to 0.5 points;
+* Grid transparency (**grid.alpha**): change from 1.0 to 0.3;
+* Draw ticks on the top spine (**xtick.top**): change from *False* to *True* (how to turn it off?);
+* Draw ticks on the right spine (**ytick.rigth**): change from *False* to *True* (how to turn it off?);
+* Major ticks width (**xtick.major.width** and **ytick.major.width**): change from 0.8 to 0.5 points;
+* Ticks direction (**xtick.direction** and **ytick.direction**): change from *out* to *in*;
+* Legend location (**legend.loc**): change from *best* to *upper right* (it may provide faster rendering for figures with many graphs);
+* Transparency of legend frame (**legend.framealpha**): change from 0.8 to 1;
+
+

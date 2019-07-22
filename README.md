@@ -26,7 +26,7 @@
 
 ### Grids and ticks:
 
-* Display figure major grids (**axes.grid**): changed from *False* to *True* (to turn off the grids for a specific figure, use *plt.grid(False)* after the figure creation);
+* Display major grids (**axes.grid**): changed from *False* to *True* (to turn off the grids for a specific figure, use *plt.grid(False)* after the figure creation);
 
 * Grid line width (**grid.linewidth**): changed from 0.8 to 0.5 points;
 

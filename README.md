@@ -12,27 +12,27 @@
 
 ### Plots:
 
-* Width of line plots (**lines.linewidth**): change from 1.5 to 0.75 points;
+* Lines width (**lines.linewidth**): changed from 1.5 to 0.75 points;
 
-* Width of the edges around markers (**lines.markeredgewidth**): change from 1.0 to 0.2 points;
+* Markers edge width (**lines.markeredgewidth**): changed from 1.0 to 0.2 points;
 
-* Width of the borders of patch objects (**patch.linewidth**): change from 1.0 to 0.5 points.
+* Patch frame width (**patch.linewidth**): changed from 1.0 to 0.5 points.
 
 ### Legend: 
 
 * Legend location (**legend.loc**): change from *best* to *upper right* (it may provide faster rendering for figures with many graphs);
 
-* Transparency of legend frame (**legend.framealpha**): change from 0.8 to 1.
+* Legend frame transparency (**legend.framealpha**): changed from 0.8 to 1.
 
 ### Grids and ticks:
 
-* Display axes grid (**axes.grid**): change from *False* to *True* (to turn off the grids for a specific figure, use *plt.grid(False)* after the figure creation);
+* Display figure major grids (**axes.grid**): changed from *False* to *True* (to turn off the grids for a specific figure, use *plt.grid(False)* after the figure creation);
 
-* Grid line width (**grid.linewidth**): change from 0.8 to 0.5 points;
+* Grid line width (**grid.linewidth**): changed from 0.8 to 0.5 points;
 
-* Grid transparency (**grid.alpha**): change from 1.0 to 0.3;
+* Grid transparency (**grid.alpha**): changed from 1.0 to 0.3;
 
-* Draw ticks on the top and right spines (**xtick.top** and **ytick.rigth**): change from *False* to *True* (how to turn it off?);
+* Draw ticks on the top and right spines (**xtick.top** and **ytick.rigth**): changed from *False* to *True* (to turn off this behavior for a specific figure, use *plt.gca().tick_params(top=False, right=False)* after the figure creation);
 
 * Major ticks width (**xtick.major.width** and **ytick.major.width**): change from 0.8 to 0.5 points;
 

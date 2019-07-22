@@ -4,6 +4,11 @@ The file *matplotlibrc* given in repository contains modified matplotlib setting
 
 The modifications to the default values represent my personal preferences; you may need to modify it further to adapt to your own needs/preferences. If you do change any setting in the file *matplotlibrc*, you may need to restart the kernel to make sure that these changes are reflected in the subquesent plots.
 
+Note -- in the description below, the following convention is adopted:
+```python
+import matplotlib.pyplot as plt
+```
+
 The following settings have been modified in comparison to the matplotlib default values:
 
 ### Figure and axes:

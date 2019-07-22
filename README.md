@@ -1,6 +1,6 @@
 # Modified matplotlib default settings
 
-The file *matplotlibrc* given in repository contains modified matplotlib settings for producing publication-ready plots. Download this file, and include it in the same directory where the Python file used for producing the plots is located. Do not change the file name.
+The file *matplotlibrc* given in this repository contains modified matplotlib settings for producing publication-ready plots. Download this file, and include it in the same directory where the Python file used for producing the plots is located. Do not change the file name.
 
 The modifications to the default values represent my personal preferences; you may need to modify it further to adapt to your own needs/preferences. If you do change any setting in the file *matplotlibrc*, you may need to restart the kernel to make sure that these changes are reflected in the subquesent plots.
 

@@ -13,7 +13,7 @@ The following settings have been modified in comparison to the matplotlib defaul
 plt.figure(figsize=(3.5, new_height))
 ```
 
-where *new_height* is the desired figure height in inches). If your figure spans both columns, increase its width from 3.5 to 7.0625 inches:
+where *new_height* is the desired figure height, in inches. If your figure spans both columns, increase its width from 3.5 to 7.0625 inches:
 ```python 
 plt.figure(figsize=(7.0625, new_height))
 ```

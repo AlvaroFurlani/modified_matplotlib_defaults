@@ -15,5 +15,5 @@
 * Ticks direction (**xtick.direction** and **ytick.direction**): change from *out* to *in*;
 * Legend location (**legend.loc**): change from *best* to *upper right* (it may provide faster rendering for figures with many graphs);
 * Transparency of legend frame (**legend.framealpha**): change from 0.8 to 1;
-
-
+* Figure size (**figure.figsize**): change from 6.4 by 4.8 inches to 3.5 by 1.5 inches (comments... 2 columns: 7.0625 in);
+* Tight layout (**figure.constrained_layout.use**): change from *False* to *True* (it makes the plot elements to fit on the figure area, removing unecessary white space around the axes). The padding is controlled by **figure.constrained_layout.h_pad** and **figure.constrained_layout.w_pad**, which were changed from 0.04167 (3 points) to 0.01389 (1 point);

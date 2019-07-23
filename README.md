@@ -34,7 +34,7 @@ plt.figure(figsize=(7.0625, new_height))
 
 * Resolution for saving the figure (**savefig.dpi**): changed from *figure* (which inherits the resolution from the figure object -- 100 dots per inch) to 600 dots per inch;
 
-* File format of the saved figure (**savefig.format**): changed from ```*png*``` to ```*pdf*``` (this parameter is used only if ```*fname*``` in ```*plt.savefig()*``` does not contain a file extension and ```*format=None*```).
+* File format of the saved figure (**savefig.format**): changed from ```png``` to ```pdf``` (this parameter is used only if ```fname``` in ```plt.savefig()``` does not contain a file extension and ```format=None```).
 
 ### Plots:
 

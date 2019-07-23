@@ -410,7 +410,7 @@ path.sketch:             None           ## May be none, or a 3-tuple of the form
 savefig.dpi:          600      ## figure dots per inch or 'figure'
 savefig.facecolor:    white    ## figure facecolor when saving
 savefig.edgecolor:    white    ## figure edgecolor when saving
-savefig.format:       png      ## png, ps, pdf, svg
+savefig.format:       pdf      ## png, ps, pdf, svg
 savefig.bbox:         standard ## 'tight' or 'standard'; 'tight' is incompatible with pipe-based animation backends but will 
                                ## work with temporary file based ones: e.g. setting animation.writer to ffmpeg will not work,
                                ## use ffmpeg_file instead

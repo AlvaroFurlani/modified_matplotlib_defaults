@@ -40,7 +40,7 @@ plt.figure(figsize=(7.0625, new_height))
 
 * Markers edge width (**lines.markeredgewidth**): changed from 1.0 to 0.2 points;
 
-* Patch frame width (**patch.linewidth**): changed from 1.0 to 0.5 points.
+* Patch frame width (**patch.linewidth**): changed from 1.0 to 0.5 points (this parameter also control the line width of the legend frame).
 
 ### Legend: 
 

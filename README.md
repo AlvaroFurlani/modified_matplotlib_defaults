@@ -51,7 +51,7 @@ where ```new_height``` is the desired figure height, in inches. If your figure s
 plt.figure(figsize=(7.0625, new_height))
 ```
 
-* Tight layout (**figure.constrained_layout.use**): changed from ```False``` to ```True```. It adjusts all plots elements so that the white space between the axes and the figure frame is reduced. The amount of horizontal and vertical padding is controlled by **figure.constrained_layout.h_pad** and **figure.constrained_layout.w_pad**, respectively, which were changed from ```0.04167``` (3 points) to ```0.01389``` (1 point);
+* Tight layout (**figure.constrained_layout.use**): changed from ```False``` to ```True```. It adjusts all plots elements so that the white space between the axes and the figure frame is reduced; i.e., the plot itself ocuppies all available space in the figure. The amount of horizontal and vertical padding is controlled by **figure.constrained_layout.h_pad** and **figure.constrained_layout.w_pad**, respectively, which were changed from ```0.04167``` (3 points) to ```0.01389``` (1 point);
 
 * Axis spines width (**axes.linewidth**): changed from ```0.8``` to ```0.5``` points;
 

@@ -8,7 +8,7 @@ Note 1 -- the description below adopts the following convention:
 ```python
 import matplotlib.pyplot as plt
 from matplotlib import  rc_file
-rc_file('my_mpl_settings') # file containing your settings (also include path is file not located in the current directory)
+rc_file('my_mpl_settings') # file containing your settings (include path if not located in the current directory)
 ```
 
 The modifications to the default values shown in this repository represent my personal preferences; you may need to modify it further to adapt to your own needs/preferences. If you do change any setting in the file *my_mpl_settings*, make sure to run the line of code ```rc_file()``` again so that the modifications are reflected in the created plots.

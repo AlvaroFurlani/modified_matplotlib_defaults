@@ -6,12 +6,12 @@
 ## See http://matplotlib.org/users/customizing.html#the-matplotlibrc-file for more details on the paths which are checked for
 ## the configuration file.
 ##
-## This file is best viewed in a editor which supports python mode syntax highlighting. Blank lines, or lines starting with a
-## comment symbol, are ignored, as are trailing comments.  Other lines must have the format
-##     key : val ## optional comment
+## This file is best viewed in a editor which supports Python mode syntax highlighting. Blank lines, or lines starting with a
+## comment symbol, are ignored, as are trailing comments. Other lines must have the format
+##     key: val ## optional comment
 ##
-## Colors: for the color values below, you can either use - a matplotlib color string, such as r, k, or b - an rgb tuple, 
-## such as (1.0, 0.5, 0.0) - a hex string, such as ff00ff - a scalar grayscale intensity such as 0.75 - a legal html color 
+## Colors: for the color values below, you can either use a matplotlib color string, such as r, k, or b; an rgb tuple, 
+## such as (1.0, 0.5, 0.0); a hex string, such as ff00ff; a scalar grayscale intensity such as 0.75; or a legal html color 
 ## name, e.g., red, blue, darkslategray.
 ##
 ## Latest update: July 22, by Alvaro Furlani Bastos 
@@ -206,7 +206,7 @@ mathtext.fontset:        dejavusans ## should be 'dejavusans' (default), 'dejavu
                                     ## 'stixsans' or 'custom'
 mathtext.fallback_to_cm: True       ## when True, use symbols from the Computer Modern fonts when a symbol can not be found 
                                     ## in one of the custom math fonts
-mathtext.default: it                ## the default font to use for math; can be any of the LaTeX font names, including the 
+mathtext.default:        it         ## the default font to use for math; can be any of the LaTeX font names, including the 
                                     ## special name "regular" for the same font used in regular text
 
 #### AXES -- see http://matplotlib.org/api/axes_api.html#module-matplotlib.axes 

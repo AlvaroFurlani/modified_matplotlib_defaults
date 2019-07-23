@@ -42,7 +42,7 @@ plt.savefig('test_modified_default_no_top_right_ticks.pdf')
 # %% Restore matplotlib defaults
 plt.rcdefaults()
 
-# %% Example 5: original default values, without grid (make sure matplotlibrc is not in the current directory)
+# %% Example 5: original default values, without grid
 plt.figure()
 plt.plot(x, y1, label='Curve 1')
 plt.plot(x, y2, label='Curve 2')
@@ -50,7 +50,7 @@ plt.gca().set(xlabel='My x_label', ylabel='My y_label')
 plt.legend()
 plt.savefig('test_original_default_no_grid.pdf')
 
-# %% Example 6: original default values, with grid (make sure matplotlibrc is not in the current directory)
+# %% Example 6: original default values, with grid
 plt.figure()
 plt.plot(x, y1, label='Curve 1')
 plt.plot(x, y2, label='Curve 2')

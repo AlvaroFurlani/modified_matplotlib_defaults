@@ -44,7 +44,7 @@ plt.figure(figsize=(7.0625, new_height))
 
 ### Legend: 
 
-* Legend location (**legend.loc**): change from *best* to *upper right* (it may provide faster rendering for figures with many graphs);
+* Legend location (**legend.loc**): changed from *best* to *upper right* (it may provide faster rendering for figures with many graphs);
 
 * Legend frame transparency (**legend.framealpha**): changed from 0.8 to 1.
 

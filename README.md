@@ -48,7 +48,7 @@ plt.figure(figsize=(7.0625, new_height))
 
 * Legend location (**legend.loc**): changed from ```best``` to ```upper right``` (it may provide faster rendering for figures with many graphs);
 
-* Legend frame transparency (**legend.framealpha**): changed from ```0.8``` to ```1``` (i.e., no background elements are seen through the legend frame).
+* Legend frame transparency (**legend.framealpha**): changed from ```0.8``` to ```1.0``` (i.e., no background elements are seen through the legend frame).
 
 ### Grids and ticks:
 

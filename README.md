@@ -61,9 +61,9 @@ plt.grid(False)
 
 * Draw ticks on the top and right spines (**xtick.top** and **ytick.rigth**): changed from *False* to *True*; to turn off this behavior for a specific figure, insert one the following lines of code after the figure creation:
 ```python
-plt.gca().tick_params(top=False, right=False)
-plt.gca().tick_params(top=False)
-plt.gca().tick_params(right=False)
+plt.gca().tick_params(top=False, right=False) # turn off ticks on both top and right spines
+plt.gca().tick_params(top=False) # turn off ticks only on top spine
+plt.gca().tick_params(right=False) # turn onff ticks only on right spine
 ```
 
 * Major ticks width (**xtick.major.width** and **ytick.major.width**): changed from 0.8 to 0.5 points;

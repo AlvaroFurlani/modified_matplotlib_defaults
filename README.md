@@ -1,6 +1,6 @@
 # Modified matplotlib default settings
 
-The file *my_mpl_settings* given in this repository is a configuration file that contains modified matplotlib settings for creating publication-ready plots. Download this file, and include it in a directory accessible by the Python file(s) used for producing the plots. The values in this file override the default settings in the file *matplotlibrc* until the kernel is restarted or the default settings are restored.
+The file *my_mpl_settings* given in this repository is a configuration file that contains modified matplotlib settings for creating publication-ready plots. Download this file, and include it in a directory accessible by the Python file(s) used for producing the plots. The values in this file override the default settings in the file *matplotlibrc* until the kernel is restarted or the default settings are restored. Obviously, this modified settings can also be overriden for individual plots (more on this later).
 
 Using this approach to modify plotting settings is especially useful when working on multiple projects, and a different set of defaults is applied to each one. In this way, the default values are easily modified for all plots in a given project, and reproducibility is guaranteed when producing the plots in different environments and/or at another time.
 
@@ -46,6 +46,8 @@ where ```new_height``` is the desired figure height, in inches. If your figure s
 ```python 
 plt.figure(figsize=(7.0625, new_height))
 ```
+
+Note that using any of the lines of code above, the ```figsize``` property changes only for the current figure; the modified default settings in the file *my_mpl_settings* remain unchanged. Analogous comment is valid for the other parameters described next.
 
 * Tight layout (**figure.constrained_layout.use**): changed from ```False``` to ```True```. It adjusts all plots elements so that the white space between the axes and the figure frame is reduced; i.e., the plot itself ocuppies all available space in the figure. The amount of horizontal and vertical padding is controlled by **figure.constrained_layout.h_pad** and **figure.constrained_layout.w_pad**, respectively, which were changed from ```0.04167``` (3 points) to ```0.01389``` (1 point);
 

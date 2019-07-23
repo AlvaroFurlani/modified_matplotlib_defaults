@@ -1,25 +1,17 @@
 # Modified matplotlib default settings
 
-The file *matplotlibrc* given in this repository is a configuration file that contains modified matplotlib settings for creating publication-ready plots. Download this file, and include it in the same directory where the Python file(s) used for producing the plots is (are) located. Do not change the file name (matplotlib only recognizes the name *matplotlibrc*).
+The file *my_mpl_settings* given in this repository is a configuration file that contains modified matplotlib settings for creating publication-ready plots. Download this file, and include it in a directory accessible by the Python file(s) used for producing the plots. The settings in this file override the default settings in the file *matplotlibrc* until the kernel is restarted or the default settings are restored.
 
-
-
-Usually, the matplotlibrc file lives in ~/.matplotlib. If it doesn’t, system-wide defaults are used. If it does, then that file determines the defaults to be used for all plots you create. The downside is that it’s likely the case, especially if you’re working on more than one paper, that you’d like a different set of defaults to apply to each one.
-
-Enter rc_file. This function takes a path to a file that is treated as a matplotlibrc file. Now you can keep your default settings in one place for each journal. Moreover, if you submit any new papers to that journal, all your plots will look the same across multiple papers. Just copy the matplotlib defaults, from here, override with your defaults, and then stick the following at the top of your plotter:
-
-
-
-
-
-The modifications to the default values represent my personal preferences; you may need to modify it further to adapt to your own needs/preferences. If you do change any setting in the file *matplotlibrc*, you may need to restart the kernel to make sure that these changes are reflected in the subsequent plots.
+Using this approach to modify plotting settings is especially useful when working on multiple projects, and a different set of defaults is applied to each one. In this way, the default values are easily modified for all plots in a given project, and reproducibility is guaranteed when producing the plots in different environments and/or at another time.
 
 Note -- the description below adopts the following convention:
 ```python
 import matplotlib.pyplot as plt
 from matplotlib import  rc_file
-rc_file('xxx.rc') # file containing your settings
+rc_file('my_mpl_settings') # file containing your settings
 ```
+
+The modifications to the default values shown in this repository represent my personal preferences; you may need to modify it further to adapt to your own needs/preferences. If you do change any setting in the file *my_mpl_settings*, make sure to run the line of code ```rc_file()``` again.
 
 Moreover, the default matplotlib default settings can be restored through:
 ```python

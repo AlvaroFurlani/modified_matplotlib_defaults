@@ -1,32 +1,36 @@
 # Modified matplotlib default settings
 
-The file *my_mpl_settings* given in this repository is a configuration file that contains modified matplotlib settings for creating publication-ready plots. Download this file, and include it in a directory accessible by the Python file(s) used for producing the plots. The settings in this file override the default settings in the file *matplotlibrc* until the kernel is restarted or the default settings are restored.
+The file *my_mpl_settings* given in this repository is a configuration file that contains modified matplotlib settings for creating publication-ready plots. Download this file, and include it in a directory accessible by the Python file(s) used for producing the plots. The values in this file override the default settings in the file *matplotlibrc* until the kernel is restarted or the default settings are restored.
 
 Using this approach to modify plotting settings is especially useful when working on multiple projects, and a different set of defaults is applied to each one. In this way, the default values are easily modified for all plots in a given project, and reproducibility is guaranteed when producing the plots in different environments and/or at another time.
 
-Note -- the description below adopts the following convention:
+Note 1 -- the description below adopts the following convention:
 ```python
 import matplotlib.pyplot as plt
 from matplotlib import  rc_file
-rc_file('my_mpl_settings') # file containing your settings
+rc_file('my_mpl_settings') # file containing your settings (also include path is file not located in the current directory)
 ```
 
-The modifications to the default values shown in this repository represent my personal preferences; you may need to modify it further to adapt to your own needs/preferences. If you do change any setting in the file *my_mpl_settings*, make sure to run the line of code ```rc_file()``` again.
+The modifications to the default values shown in this repository represent my personal preferences; you may need to modify it further to adapt to your own needs/preferences. If you do change any setting in the file *my_mpl_settings*, make sure to run the line of code ```rc_file()``` again so that the modifications are reflected in the created plots.
 
 Moreover, the default matplotlib default settings can be restored through:
 ```python
 plt.rcdefaults()
 ```
 
+Note 2 -- the same modifications to the matplotlib default settings could be obtained by inserting the code below instead of ```rc_file()```, although it is less straightforward and more error-prone:
 ```python
-plt.rcParams.update({'figure.figsize': [3.5, 1.5],
-                     'font.size': 6, 'font.family': 'serif',
-                     'grid.alpha': 0.3, 'grid.linewidth': 0.5,
-                     'legend.borderaxespad': 0, 'legend.edgecolor': 'black', 'legend.fancybox': False,
-                     'legend.framealpha': 1, 'patch.linewidth': 0.5,
-                     'savefig.dpi': 600,
+plt.rcParams.update({'figure.figsize': (3.5, 1.5), 'figure.constrained_layout.use': True, 
+                     'figure.constrained_layout.h_pad': 0.01389, 'figure.constrained_layout.w_pad': 0.01389,
+                     'axes.linewidth': 0.5, 'axes.grid': True,
+                     'savefig.dpi': 600, 'savefig.format': 'pdf',
+                     'lines.linewidth': 0.75, 'lines.markeredgewidth': 0.2,
+                     'patch.linewidth': 0.5,
+                     'legend.loc': 'upper right', 'legend.framealpha': 1,
+                     'grid.linewidth': 0.5, 'grid.alpha': 0.3, 
                      'xtick.direction': 'in', 'xtick.top': True, 'xtick.major.width': 0.5,
-                     'ytick.direction': 'in', 'ytick.right': True, 'ytick.major.width': 0.5})
+                     'ytick.direction': 'in', 'ytick.right': True, 'ytick.major.width': 0.5
+                     'font.family': 'serif', 'font.size': 6})
 ```
 
 The following settings have been modified in comparison to the matplotlib default values:

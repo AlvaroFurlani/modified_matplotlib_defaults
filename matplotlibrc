@@ -50,7 +50,7 @@ webagg.port_retries: 50
 #### When True, open the webbrowser to the plot that is shown
 webagg.open_in_browser: True
 
-#### if you are running pyplot inside a GUI and your backend choice conflicts, we will automatically try to find a compatible 
+#### If you are running pyplot inside a GUI and your backend choice conflicts, we will automatically try to find a compatible 
 ## one for you if backend_fallback is True
 backend_fallback: True
 
@@ -58,7 +58,7 @@ interactive: False
 toolbar:     toolbar2 ## None | toolbar2  ("classic" is deprecated)
 timezone:    UTC      ## a pytz timezone string, e.g., US/Central or Europe/Paris
 
-#### VWhere your matplotlib data lives if you installed to a non-default location. This is where the matplotlib fonts, 
+#### Where your matplotlib data lives if you installed to a non-default location. This is where the matplotlib fonts, 
 ## bitmaps, etc reside
 datapath: /home/jdhunter/mpldata
 
@@ -129,7 +129,7 @@ boxplot.capprops.color:     black
 boxplot.capprops.linewidth: 1.0
 boxplot.capprops.linestyle: -
 
-boxplot.medianprops.color:      C1
+boxplot.medianprops.color:     C1
 boxplot.medianprops.linewidth: 1.0
 boxplot.medianprops.linestyle: -
 
@@ -140,7 +140,6 @@ boxplot.meanprops.markeredgecolor: C2
 boxplot.meanprops.markersize:      6
 boxplot.meanprops.linestyle        --
 boxplot.meanprops.linewidth:       1.0
-
 
 #### FONT -- see http://matplotlib.org/api/font_manager_api.html for more information on font properties.  
 ## The 6 font properties used for font matching are given below with their default values.
@@ -265,7 +264,7 @@ axes.spines.right:  True
 
 #### DATES
 ## These control the default format strings used in AutoDateFormatter. Any valid format datetime format string can be used 
-## (see the Python `datetime` for details).  For example using '%%x' will use the locale date representation, '%%X' will use 
+## (see the Python `datetime` for details). For example using '%%x' will use the locale date representation, '%%X' will use 
 ## the locale time representation, and '%%c' will use the full locale datetime representation.
 ## These values map to the scales: {'year': 365, 'month': 30, 'day': 1, 'hour': 1/24, 'minute': 1 / (24 * 60)}
 date.autoformatter.year:        %Y
@@ -405,17 +404,17 @@ agg.path.chunksize: 0 ## 0 to disable; values in the range 10000 to 100000 can i
                       ## minor artifacts, though. A value of 20000 is probably a good starting point.
 
 #### PATHS
-path.simplify:           True           ## when True, simplify paths by removing "invisible" points to reduce file size and 
+#path.simplify:           True           ## when True, simplify paths by removing "invisible" points to reduce file size and 
                                         ## increase rendering speed
-path.simplify_threshold: 0.111111111111 ## the threshold of similarity below which vertices will be removed in the 
+#path.simplify_threshold: 0.111111111111 ## the threshold of similarity below which vertices will be removed in the 
                                         ## simplification process
-path.snap:               True           ## when True, rectilinear axis-aligned paths will be snapped to the nearest pixel 
+#path.snap:               True           ## when True, rectilinear axis-aligned paths will be snapped to the nearest pixel 
                                         ## when certain criteria are met; when False, paths will never be snapped.
-path.sketch:             None           ## May be none, or a 3-tuple of the form (scale, length, randomness). *scale* is the 
+#path.sketch:             None           ## May be none, or a 3-tuple of the form (scale, length, randomness). *scale* is the 
                                         ## amplitude of the wiggle perpendicular to the line (in pixels). *length* is the 
                                         ## length of the wiggle along the line (in pixels). *randomness* is the factor by 
                                         ## which the length is randomly scaled.
-path.effects:            []  
+#path.effects:            []  
 
 #### SAVING FIGURES (the default savefig params can be different from the display params; e.g., you may want a higher 
 ## resolution, or to make the figure background white
@@ -445,7 +444,7 @@ ps.fonttype:      3      ## output Type 3 (Type3) or Type 42 (TrueType)
 
 #### PDF BACKEND PARAMS
 pdf.compression:    6 ## integer from 0 to 9; 0 disables compression (good for debugging)
-pdf.fonttype:       3 ## Output Type 3 (Type3) or Type 42 (TrueType)
+pdf.fonttype:       3 ## output Type 3 (Type3) or Type 42 (TrueType)
 pdf.use14corefonts: False
 pdf.inheritcolor:   False
 
@@ -457,7 +456,7 @@ svg.hashsalt:     None ## if not None, use this string as hash salt instead of u
 
 #### PGF PARAMS
 pgf.rcfonts:   True
-#pgf.preamble:            ## see text.latex.preamble for documentation
+#pgf.preamble: ## see text.latex.preamble for documentation
 pgf.texsystem: xelatex
 
 #### DOCSTRING PARAMS
@@ -465,22 +464,22 @@ docstring.hardcopy = False ## set this when you want to generate hardcopy docstr
 
 #### Event keys to interact with figures/plots via keyboard. Customize these settings according to your needs. Leave the 
 ## field(s) empty if you don't need a key-map. (i.e., fullscreen : '')
-keymap.fullscreen: f, ctrl+f                       ## toggling
-keymap.home: h, r, home                            ## home or reset mnemonic
-keymap.back: left, c, backspace, MouseButton.BACK  ## forward / backward keys
-keymap.forward: right, v, MouseButton.FORWARD      ## for quick navigation
-keymap.pan: p                                      ## pan mnemonic
-keymap.zoom: o                                     ## zoom mnemonic
-keymap.save: s, ctrl+s                             ## saving current figure
-keymap.help: f1                                    ## display help about active tools
-keymap.quit: ctrl+w, cmd+w, q                      ## close the current figure
-keymap.quit_all: W, cmd+W, Q                       ## close all figures
-keymap.grid: g                                     ## switching on/off major grids in current axes
-keymap.grid_minor: G                               ## switching on/off minor grids in current axes
-keymap.yscale: l                                   ## toggle scaling of y-axes ('log'/'linear')
-keymap.xscale: k, L                                ## toggle scaling of x-axes ('log'/'linear')
-keymap.all_axes: a                                 ## enable all axes
-keymap.copy: ctrl+c, cmd+c                         ## Copy figure to clipboard
+keymap.fullscreen: f, ctrl+f                            ## toggling
+keymap.home:       h, r, home                           ## home or reset mnemonic
+keymap.back:       left, c, backspace, MouseButton.BACK ## forward / backward keys
+keymap.forward:    right, v, MouseButton.FORWARD        ## for quick navigation
+keymap.pan:        p                                    ## pan mnemonic
+keymap.zoom:       o                                    ## zoom mnemonic
+keymap.save:       s, ctrl+s                            ## saving current figure
+keymap.help:       f1                                   ## display help about active tools
+keymap.quit:       ctrl+w, cmd+w, q                     ## close the current figure
+keymap.quit_all:   W, cmd+W, Q                          ## close all figures
+keymap.grid:       g                                    ## switching on/off major grids in current axes
+keymap.grid_minor: G                                    ## switching on/off minor grids in current axes
+keymap.yscale:     l                                    ## toggle scaling of y-axes ('log'/'linear')
+keymap.xscale:     k, L                                 ## toggle scaling of x-axes ('log'/'linear')
+keymap.all_axes:   a                                    ## enable all axes
+keymap.copy:       ctrl+c, cmd+c                        ## copy figure to clipboard
 
 #### ANIMATION settings
 animation.html:         none    ## How to display the animation as HTML in the IPython notebook. 'html5' uses HTML5 video tag; 

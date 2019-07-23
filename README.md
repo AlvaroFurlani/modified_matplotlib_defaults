@@ -1,12 +1,17 @@
 # Modified matplotlib default settings
 
-The file *matplotlibrc* given in this repository contains modified matplotlib settings for producing publication-ready plots. Download this file, and include it in the same directory where the Python file used for producing the plots is located. Do not change the file name.
+The file *matplotlibrc* given in this repository is a configuration file that contains modified matplotlib settings for creating publication-ready plots. Download this file, and include it in the same directory where the Python file used for producing the plots is located. Do not change the file name (matplotlib only recognizes the *matplotlibrc* name).
 
 The modifications to the default values represent my personal preferences; you may need to modify it further to adapt to your own needs/preferences. If you do change any setting in the file *matplotlibrc*, you may need to restart the kernel to make sure that these changes are reflected in the subsequent plots.
 
-Note -- in the description below, the following convention is adopted:
+Note -- the description below adopts the following convention:
 ```python
 import matplotlib.pyplot as plt
+```
+
+Moreover, the default matplotlib default settings can be restored through:
+```python
+plt.rcdefaults()
 ```
 
 The following settings have been modified in comparison to the matplotlib default values:

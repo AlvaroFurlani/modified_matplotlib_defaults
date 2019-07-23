@@ -59,9 +59,11 @@ plt.grid(False)
 
 * Grid transparency (**grid.alpha**): changed from 1.0 to 0.3;
 
-* Draw ticks on the top and right spines (**xtick.top** and **ytick.rigth**): changed from *False* to *True*; to turn off this behavior for a specific figure, insert the following line of code after the figure creation:
+* Draw ticks on the top and right spines (**xtick.top** and **ytick.rigth**): changed from *False* to *True*; to turn off this behavior for a specific figure, insert one the following lines of code after the figure creation:
 ```python
 plt.gca().tick_params(top=False, right=False)
+plt.gca().tick_params(top=False)
+plt.gca().tick_params(right=False)
 ```
 
 * Major ticks width (**xtick.major.width** and **ytick.major.width**): changed from 0.8 to 0.5 points;

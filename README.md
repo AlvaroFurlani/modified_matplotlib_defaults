@@ -2,16 +2,39 @@
 
 The file *matplotlibrc* given in this repository is a configuration file that contains modified matplotlib settings for creating publication-ready plots. Download this file, and include it in the same directory where the Python file(s) used for producing the plots is (are) located. Do not change the file name (matplotlib only recognizes the name *matplotlibrc*).
 
+
+
+Usually, the matplotlibrc file lives in ~/.matplotlib. If it doesn’t, system-wide defaults are used. If it does, then that file determines the defaults to be used for all plots you create. The downside is that it’s likely the case, especially if you’re working on more than one paper, that you’d like a different set of defaults to apply to each one.
+
+Enter rc_file. This function takes a path to a file that is treated as a matplotlibrc file. Now you can keep your default settings in one place for each journal. Moreover, if you submit any new papers to that journal, all your plots will look the same across multiple papers. Just copy the matplotlib defaults, from here, override with your defaults, and then stick the following at the top of your plotter:
+
+
+
+
+
 The modifications to the default values represent my personal preferences; you may need to modify it further to adapt to your own needs/preferences. If you do change any setting in the file *matplotlibrc*, you may need to restart the kernel to make sure that these changes are reflected in the subsequent plots.
 
 Note -- the description below adopts the following convention:
 ```python
 import matplotlib.pyplot as plt
+from matplotlib import  rc_file
+rc_file('xxx.rc') # file containing your settings
 ```
 
 Moreover, the default matplotlib default settings can be restored through:
 ```python
 plt.rcdefaults()
+```
+
+```python
+plt.rcParams.update({'figure.figsize': [3.5, 1.5],
+                     'font.size': 6, 'font.family': 'serif',
+                     'grid.alpha': 0.3, 'grid.linewidth': 0.5,
+                     'legend.borderaxespad': 0, 'legend.edgecolor': 'black', 'legend.fancybox': False,
+                     'legend.framealpha': 1, 'patch.linewidth': 0.5,
+                     'savefig.dpi': 600,
+                     'xtick.direction': 'in', 'xtick.top': True, 'xtick.major.width': 0.5,
+                     'ytick.direction': 'in', 'ytick.right': True, 'ytick.major.width': 0.5})
 ```
 
 The following settings have been modified in comparison to the matplotlib default values:
@@ -49,6 +72,8 @@ plt.figure(figsize=(7.0625, new_height))
 * Legend location (**legend.loc**): changed from ```best``` to ```upper right``` (it may provide faster rendering for figures with many graphs);
 
 * Legend frame transparency (**legend.framealpha**): changed from ```0.8``` to ```1.0``` (i.e., no background elements are seen through the legend frame).
+
+#### Side note:
 
 ### Grids and ticks:
 

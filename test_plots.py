@@ -40,7 +40,7 @@ plt.legend()
 plt.gca().tick_params(top=False, right=False)
 plt.savefig('test_modified_default_no_top_right_ticks')
 
-# %% Example 5: modified default values
+# %% Example 5: modified default values, legends
 fig, (ax1, ax2) = plt.subplots(nrows=2, ncols=1, figsize=(3.5, 3))
 ax1.plot(x, y1, label='Curve 1')
 ax1.plot(x, y2, label='Curve 2')

@@ -7,7 +7,7 @@ Using this approach to modify plotting settings is especially useful when workin
 Note 1 -- the description below adopts the following convention:
 ```python
 import matplotlib.pyplot as plt
-from matplotlib import  rc_file
+from matplotlib import rc_file
 rc_file('my_mpl_settings') # file containing your settings (include path if not located in the current directory)
 ```
 

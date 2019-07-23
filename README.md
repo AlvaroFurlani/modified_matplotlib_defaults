@@ -70,7 +70,7 @@ plt.gca().tick_params(right=False) # turn onff ticks only on right spine
 
 * Major ticks width (**xtick.major.width** and **ytick.major.width**): changed from ```0.8``` to ```0.5``` points;
 
-* Ticks direction (**xtick.direction** and **ytick.direction**): change from ```out``` to ```in```.
+* Ticks direction (**xtick.direction** and **ytick.direction**): changed from ```out``` to ```in```.
 
 ### Text:
 

@@ -1,31 +1,20 @@
 #### MATPLOTLIBRC FORMAT
 
-## This is a sample matplotlib configuration file - you can find a copy
-## of it on your system in
-## site-packages/matplotlib/mpl-data/matplotlibrc.  If you edit it
-## there, please note that it will be overwritten in your next install.
-## If you want to keep a permanent local copy that will not be
-## overwritten, place it in the following location:
-## unix/linux:
-##      $HOME/.config/matplotlib/matplotlibrc or
-##      $XDG_CONFIG_HOME/matplotlib/matplotlibrc (if $XDG_CONFIG_HOME is set)
-## other platforms:
-##      $HOME/.matplotlib/matplotlibrc
+## This is a modified version of the matplotlib configuration file - you can find a copy of the original file on your system 
+## in site-packages/matplotlib/mpl-data/matplotlibrc.  
 ##
-## See http://matplotlib.org/users/customizing.html#the-matplotlibrc-file for
-## more details on the paths which are checked for the configuration file.
+## See http://matplotlib.org/users/customizing.html#the-matplotlibrc-file for more details on the paths which are checked for
+## the configuration file.
 ##
-## This file is best viewed in a editor which supports python mode
-## syntax highlighting. Blank lines, or lines starting with a comment
-## symbol, are ignored, as are trailing comments.  Other lines must
-## have the format
+## This file is best viewed in a editor which supports python mode syntax highlighting. Blank lines, or lines starting with a
+## comment symbol, are ignored, as are trailing comments.  Other lines must have the format
 ##     key : val ## optional comment
 ##
-## Colors: for the color values below, you can either use - a
-## matplotlib color string, such as r, k, or b - an rgb tuple, such as
-## (1.0, 0.5, 0.0) - a hex string, such as ff00ff - a scalar
-## grayscale intensity such as 0.75 - a legal html color name, e.g., red,
-## blue, darkslategray
+## Colors: for the color values below, you can either use - a matplotlib color string, such as r, k, or b - an rgb tuple, 
+## such as (1.0, 0.5, 0.0) - a hex string, such as ff00ff - a scalar grayscale intensity such as 0.75 - a legal html color 
+## name, e.g., red, blue, darkslategray.
+##
+## Latest update: July 22, by Alvaro Furlani Bastos 
 
 ##### CONFIGURATION BEGINS HERE
 
@@ -404,13 +393,13 @@ agg.path.chunksize: 0 ## 0 to disable; values in the range 10000 to 100000 can i
                       ## minor artifacts, though. A value of 20000 is probably a good starting point.
 
 #### PATHS
-#path.simplify:           True           ## when True, simplify paths by removing "invisible" points to reduce file size and 
+path.simplify:           True           ## when True, simplify paths by removing "invisible" points to reduce file size and 
                                         ## increase rendering speed
-#path.simplify_threshold: 0.111111111111 ## the threshold of similarity below which vertices will be removed in the 
+path.simplify_threshold: 0.111111111111 ## the threshold of similarity below which vertices will be removed in the 
                                         ## simplification process
-#path.snap:               True           ## when True, rectilinear axis-aligned paths will be snapped to the nearest pixel 
+path.snap:               True           ## when True, rectilinear axis-aligned paths will be snapped to the nearest pixel 
                                         ## when certain criteria are met; when False, paths will never be snapped.
-#path.sketch:             None           ## May be none, or a 3-tuple of the form (scale, length, randomness). *scale* is the 
+path.sketch:             None           ## May be none, or a 3-tuple of the form (scale, length, randomness). *scale* is the 
                                         ## amplitude of the wiggle perpendicular to the line (in pixels). *length* is the 
                                         ## length of the wiggle along the line (in pixels). *randomness* is the factor by 
                                         ## which the length is randomly scaled.

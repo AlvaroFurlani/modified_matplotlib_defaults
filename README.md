@@ -73,6 +73,11 @@ Note that using any of the lines of code above, the ```figsize``` property chang
 
 #### Side note:
 
+In some cases, it may be desired to remove any space between the legend frame and the axes (see *test_modified_default_legends.pdf* for an example). If you do not want to modify the file *my_mpl_settings*, this behavior can be achieved by inserting the following line of code after the plotting the figure:
+```python
+plt.legend(borderaxespad=0, edgecolor='k', fancybox=False)
+```
+
 ### Grids and ticks:
 
 * Display major grids (**axes.grid**): changed from ```False``` to ```True```; to turn off the grids for a specific figure, insert the following line of code after the figure creation:

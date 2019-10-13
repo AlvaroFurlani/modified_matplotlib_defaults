@@ -20,7 +20,7 @@ plt.rcdefaults()
 
 Note 2: the same modifications to the matplotlib default settings could be obtained by inserting the code below instead of ```rc_file()```, although it is less straightforward and more error-prone:
 ```python
-plt.rcParams.update({'figure.figsize': (3.5, 1.5), 'figure.constrained_layout.use': True, 
+plt.rcParams.update({'figure.figsize': (3.5, 1.75), 'figure.constrained_layout.use': True, 
                      'figure.constrained_layout.h_pad': 0.01389, 'figure.constrained_layout.w_pad': 0.01389,
                      'axes.linewidth': 0.5, 'axes.grid': True,
                      'savefig.dpi': 600, 'savefig.format': 'pdf',
@@ -37,7 +37,7 @@ The following settings have been modified in comparison to the matplotlib defaul
 
 ### Figure and axes:
 
-* Figure size (**figure.figsize**): changed from ```6.4 x 4.8``` inches to ```3.5 x 1.5``` inches. This figure size may seem too small in a matplotlib window; however, it is the ideal size for double-column articles (assuming letter paper size). You may need to adjust the  height value when creating the figure object according to your dataset:
+* Figure size (**figure.figsize**): changed from ```6.4 x 4.8``` inches to ```3.5 x 1.75``` inches. This figure size may seem too small in a matplotlib window; however, it is the ideal size for double-column articles (assuming letter paper size). You may need to adjust the  height value when creating the figure object according to your dataset:
 ```python 
 plt.figure(figsize=(3.5, new_height))
 ```
@@ -49,7 +49,7 @@ plt.figure(figsize=(7.0625, new_height))
 
 Note that using any of the lines of code above, the ```figsize``` property changes only for the current figure; the modified default settings in the file *my_mpl_settings* remain unchanged (i.e., the ```figsize``` property is overriden only locally). Analogous comment is valid for the other parameters described next.
 
-* Tight layout (**figure.constrained_layout.use**): changed from ```False``` to ```True```. It adjusts all plots elements so that the white space between the axes and the figure frame is reduced; i.e., the plot itself ocuppies all available space in the figure. The amount of horizontal and vertical padding is controlled by **figure.constrained_layout.h_pad** and **figure.constrained_layout.w_pad**, respectively, which were changed from ```0.04167``` (3 points) to ```0.01389``` (1 point);
+* Tight layout (**figure.constrained_layout.use**): changed from ```False``` to ```True```. It adjusts all plots elements so that the white space between the axes and the figure frame is reduced; i.e., the plot itself ocuppies all available space in the figure. The amount of horizontal and vertical padding is controlled by **figure.constrained_layout.h_pad** and **figure.constrained_layout.w_pad**, respectively, which were changed from ```0.04167``` inches (3 points) to ```0.01389``` inches (1 point);
 
 * Axis spines width (**axes.linewidth**): changed from ```0.8``` to ```0.5``` points;
 
@@ -71,7 +71,13 @@ Note that using any of the lines of code above, the ```figsize``` property chang
 
 * Legend location (**legend.loc**): changed from ```best``` to ```upper right``` (it may provide faster rendering for figures with many graphs);
 
-* Legend frame transparency (**legend.framealpha**): changed from ```0.8``` to ```1.0``` (i.e., no background elements are seen through the legend background).
+* Legend frame transparency (**legend.framealpha**): changed from ```0.8``` to ```1.0``` (i.e., no background elements are seen through the legend background);
+
+* Legend font size (**legend.fontsize**): changed from ```medium``` to ```small```;
+
+* **legend.borderpad**: changed from ```0.4``` to ```0.3``` points;
+
+* **legend.labelspacing**: changed from ```0.5``` to ```0.3``` points.
 
 #### Side note:
 

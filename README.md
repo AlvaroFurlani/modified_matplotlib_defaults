@@ -75,9 +75,9 @@ Note that using any of the lines of code above, the ```figsize``` property chang
 
 * Legend font size (**legend.fontsize**): changed from ```medium``` to ```small```;
 
-* **legend.borderpad**: changed from ```0.4``` to ```0.3``` points;
+* Whitespace inside the legend border (**legend.borderpad**): changed from ```0.4``` to ```0.3``` points;
 
-* **legend.labelspacing**: changed from ```0.5``` to ```0.3``` points.
+* Vertical space between legend entries (**legend.labelspacing**): changed from ```0.5``` to ```0.3``` points.
 
 #### Side note:
 

@@ -37,7 +37,7 @@ The following settings have been modified in comparison to the matplotlib defaul
 
 ### Figure and axes:
 
-* Figure size (**figure.figsize**): changed from ```6.4 x 4.8``` inches to ```3.5 x 1.75``` inches. This figure size may seem too small in a matplotlib window; however, it is the ideal size for double-column articles (assuming letter paper size). You may need to adjust the  height value when creating the figure object according to your dataset:
+* Figure size (**figure.figsize**): changed from ```6.4 x 4.8``` inches to ```3.5 x 1.75``` inches. This figure size may seem too small in a matplotlib window; however, it is the ideal size for double-column articles (assuming letter paper size). You may need to adjust the  height value when creating the figure object according to your data:
 ```python 
 plt.figure(figsize=(3.5, new_height))
 ```

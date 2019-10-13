@@ -4,21 +4,21 @@ The file *my_mpl_settings* given in this repository is a configuration file that
 
 Using this approach to modify plotting settings is especially useful when working on multiple projects, and a different set of defaults is applied to each one. In this way, the default values are easily modified for all plots in a given project, and reproducibility is guaranteed when producing the plots in different environments and/or at another time.
 
-Note 1 -- the description below adopts the following convention:
+Note 1: the description below adopts the following convention:
 ```python
 import matplotlib.pyplot as plt
 from matplotlib import rc_file
 rc_file('my_mpl_settings') # file containing your settings (include path if not located in the current directory)
 ```
 
-The modifications to the default values shown in this repository represent my personal preferences; you may need to modify it further to adapt to your own needs/preferences. If you do change any setting in the file *my_mpl_settings*, make sure to run the line of code ```rc_file()``` again so that the modifications are reflected in the created plots.
+The modifications to the default values shown in this repository represent my personal preferences; you may need to modify it further to adapt to your own needs/preferences. If you do change any setting in the file *my_mpl_settings*, make sure to run the line of code ```rc_file()``` again so that the modifications are reflected in the subsequent plots.
 
 Moreover, the default matplotlib default settings can be restored through:
 ```python
 plt.rcdefaults()
 ```
 
-Note 2 -- the same modifications to the matplotlib default settings could be obtained by inserting the code below instead of ```rc_file()```, although it is less straightforward and more error-prone:
+Note 2: the same modifications to the matplotlib default settings could be obtained by inserting the code below instead of ```rc_file()```, although it is less straightforward and more error-prone:
 ```python
 plt.rcParams.update({'figure.figsize': (3.5, 1.5), 'figure.constrained_layout.use': True, 
                      'figure.constrained_layout.h_pad': 0.01389, 'figure.constrained_layout.w_pad': 0.01389,
@@ -63,7 +63,9 @@ Note that using any of the lines of code above, the ```figsize``` property chang
 
 * Markers edge width (**lines.markeredgewidth**): changed from ```1.0``` to ```0.2``` points;
 
-* Patch frame width (**patch.linewidth**): changed from ```1.0``` to ```0.5``` points (this parameter also controls the line width of the legend frame).
+* Patch frame width (**patch.linewidth**): changed from ```1.0``` to ```0.5``` points (this parameter also controls the line width of the legend frame);
+
+* Hatch line width (**hatch.linewidth**): changed from ```1.0```` to ```0.75``` points.
 
 ### Legend: 
 
@@ -104,4 +106,6 @@ plt.gca().tick_params(right=False) # turn onff ticks only on right spine
 
 * Text font family (**font.family**): changed from ```sans-serif``` to ```serif```;
 
-* Text font size (**font.size**): changed from ```10``` to ```6``` points.
+* Text font style for the ```serif``` family (**font.serif**): changed from ```DejaVu``` to ```Times New Roman```;
+
+* Text font size (**font.size**): changed from ```10``` to ```8``` points.

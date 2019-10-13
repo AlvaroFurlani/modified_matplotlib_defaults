@@ -11,10 +11,10 @@
 ##     key: val ## optional comment
 ##
 ## Colors: for the color values below, you can either use a matplotlib color string, such as r, k, or b; an rgb tuple, 
-## such as (1.0, 0.5, 0.0); a hex string, such as ff00ff; a scalar grayscale intensity such as 0.75; or a legal html color 
+## such as (1.0, 0.5, 0.0); a hex string, such as ff00ff; a scalar grayscale intensity such as '0.75'; or a legal html color 
 ## name, e.g., red, blue, darkslategray.
 ##
-## Latest update: July 22, by Alvaro Furlani Bastos 
+## Latest update: October 13, 2019, by Alvaro Furlani Bastos 
 
 ##### CONFIGURATION BEGINS HERE
 
@@ -36,7 +36,7 @@ webagg.address: 127.0.0.1
 #### If webagg.port is unavailable, a number of other random ports will be tried until one that is available is found
 webagg.port_retries: 50
 
-#### When True, open the webbrowser to the plot that is shown
+#### When True, open the web browser to the plot that is shown
 webagg.open_in_browser: True
 
 #### If you are running pyplot inside a GUI and your backend choice conflicts, we will automatically try to find a compatible 
@@ -44,7 +44,7 @@ webagg.open_in_browser: True
 backend_fallback: True
 
 interactive: False
-toolbar:     toolbar2 ## None | toolbar2  ("classic" is deprecated)
+toolbar:     toolbar2 ## None | toolbar2 ("classic" is deprecated)
 timezone:    UTC      ## a pytz timezone string, e.g., US/Central or Europe/Paris
 
 #### Where your matplotlib data lives if you installed to a non-default location. This is where the matplotlib fonts, 
@@ -83,7 +83,7 @@ patch.antialiased:     True  ## render patches in antialiased (no jaggies)
 
 #### HATCHES
 hatch.color:     black
-hatch.linewidth: 1.0
+hatch.linewidth: 0.75
 
 #### BOXPLOT
 boxplot.notch:       False
@@ -161,8 +161,9 @@ font.style:      normal
 font.variant:    normal
 font.weight:     normal
 font.stretch:    normal
-font.size:       6
-font.serif:      DejaVu Serif, Bitstream Vera Serif, Computer Modern Roman, New Century Schoolbook, Century Schoolbook L, Utopia, ITC Bookman, Bookman, Nimbus Roman No9 L, Times New Roman, Times, Palatino, Charter, serif
+font.size:       8
+#font.serif:      DejaVu Serif, Bitstream Vera Serif, Computer Modern Roman, New Century Schoolbook, Century Schoolbook L, Utopia, ITC Bookman, Bookman, Nimbus Roman No9 L, Times New Roman, Times, Palatino, Charter, serif
+font.serif:      Times New Roman, Times, serif
 font.sans-serif: DejaVu Sans, Bitstream Vera Sans, Computer Modern Sans Serif, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
 font.cursive:    Apple Chancery, Textile, Zapf Chancery, Sand, Script MT, Felipa, cursive
 font.fantasy:    Comic Sans MS, Chicago, Charcoal, ImpactWestern, Humor Sans, xkcd, fantasy
@@ -201,7 +202,7 @@ mathtext.rm:             sans
 mathtext.tt:             monospace
 mathtext.it:             sans:italic
 mathtext.bf:             sans:bold
-mathtext.sf:             sans
+mathtext.sf:             Times New Roman
 mathtext.fontset:        dejavusans ## should be 'dejavusans' (default), 'dejavuserif', 'cm' (Computer Modern), 'stix', 
                                     ## 'stixsans' or 'custom'
 mathtext.fallback_to_cm: True       ## when True, use symbols from the Computer Modern fonts when a symbol can not be found 
@@ -213,7 +214,7 @@ mathtext.default:        it         ## the default font to use for math; can be 
 axes.facecolor:                  white  ## axes background color
 axes.edgecolor:                  black  ## axes edge color
 axes.linewidth:                  0.5    ## edge linewidth
-axes.grid:                       True   ## display grid or not
+axes.grid:                       False  ## display grid or not
 axes.grid.axis:                  both   ## which axis the grid should apply to
 axes.grid.which:                 major  ## gridlines at major, minor or both ticks
 axes.titlesize:                  large  ## fontsize of the axes title
@@ -322,12 +323,12 @@ legend.shadow:         False       ## if True, give background a shadow effect
 legend.numpoints:      1           ## the number of marker points in the legend line
 legend.scatterpoints:  1           ## number of scatter points
 legend.markerscale:    1.0         ## the relative size of legend markers vs. original
-legend.fontsize:       medium      ## fontsize of the legend labels
+legend.fontsize:       small       ## fontsize of the legend labels
 legend.title_fontsize: None        ## None sets to the same as the default axes
 
 ## Dimensions as fraction of fontsize:
-legend.borderpad:     0.4 ## border whitespace
-legend.labelspacing:  0.5 ## the vertical space between the legend entries
+legend.borderpad:     0.3 ## border whitespace
+legend.labelspacing:  0.3 ## the vertical space between the legend entries
 legend.handlelength:  2.0 ## the length of the legend lines
 legend.handleheight:  0.7 ## the height of the legend handle
 legend.handletextpad: 0.8 ## the space between the legend line and legend text
@@ -335,14 +336,14 @@ legend.borderaxespad: 0.5 ## the border between the axes and legend edge
 legend.columnspacing: 2.0 ## column separation
 
 #### FIGURE -- see http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure
-figure.titlesize:        large    ## size of the figure title (Figure.suptitle())
-figure.titleweight:      normal   ## weight of the figure title
-figure.figsize:          3.5, 1.5 ## figure size in inches
-figure.dpi:              100      ## figure dots per inch
-figure.facecolor:        white    ## figure facecolor
-figure.edgecolor:        white    ## figure edgecolor
-figure.frameon:          True     ## enable figure frame
-figure.max_open_warning: 20       ## maximum number of figures to open through the pyplot interface before emitting a warning
+figure.titlesize:        large     ## size of the figure title (Figure.suptitle())
+figure.titleweight:      normal    ## weight of the figure title
+figure.figsize:          3.5, 1.75 ## figure size in inches
+figure.dpi:              100       ## figure dots per inch
+figure.facecolor:        white     ## figure facecolor
+figure.edgecolor:        white     ## figure edgecolor
+figure.frameon:          True      ## enable figure frame
+figure.max_open_warning: 20        ## maximum number of figures to open through the pyplot interface before emitting a warning
 
 ## The figure subplot parameters; all dimensions are a fraction of the figure width or height
 figure.subplot.left:   0.125 ## the left side of the subplots of the figure

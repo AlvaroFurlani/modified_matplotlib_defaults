@@ -18,7 +18,7 @@ Moreover, the default matplotlib default settings can be restored through:
 plt.rcdefaults()
 ```
 
-Note 2: the same modifications to the matplotlib default settings could be obtained by inserting the code below instead of ```rc_file()```, although it is less straightforward and more error-prone:
+Note 2: the same modifications to the matplotlib default settings could be obtained by inserting the code below (not all default changes are reflected in this line of code) instead of ```rc_file()```, although it is less straightforward and more error-prone:
 ```python
 plt.rcParams.update({'figure.figsize': (3.5, 1.75), 'figure.constrained_layout.use': True, 
                      'figure.constrained_layout.h_pad': 0.01389, 'figure.constrained_layout.w_pad': 0.01389,
@@ -65,7 +65,7 @@ Note that using any of the lines of code above, the ```figsize``` property chang
 
 * Patch frame width (**patch.linewidth**): changed from ```1.0``` to ```0.5``` points (this parameter also controls the line width of the legend frame);
 
-* Hatch line width (**hatch.linewidth**): changed from ```1.0```` to ```0.75``` points.
+* Hatch line width (**hatch.linewidth**): changed from ```1.0``` to ```0.75``` points.
 
 ### Legend: 
 

@@ -11,10 +11,10 @@
 ##     key: val ## optional comment
 ##
 ## Colors: for the color values below, you can either use a matplotlib color string, such as r, k, or b; an rgb tuple, 
-## such as (1.0, 0.5, 0.0); a hex string, such as ff00ff; a scalar grayscale intensity such as '0.75'; or a legal html color 
+## such as (1.0, 0.5, 0.0); a hex string, such as ff00ff; a scalar grayscale intensity such as 0.75; or a legal html color 
 ## name, e.g., red, blue, darkslategray.
 ##
-## Latest update: October 13, 2019, by Alvaro Furlani Bastos 
+## Latest update: July 22, by Alvaro Furlani Bastos 
 
 ##### CONFIGURATION BEGINS HERE
 
@@ -36,7 +36,7 @@ webagg.address: 127.0.0.1
 #### If webagg.port is unavailable, a number of other random ports will be tried until one that is available is found
 webagg.port_retries: 50
 
-#### When True, open the web browser to the plot that is shown
+#### When True, open the webbrowser to the plot that is shown
 webagg.open_in_browser: True
 
 #### If you are running pyplot inside a GUI and your backend choice conflicts, we will automatically try to find a compatible 
@@ -44,7 +44,7 @@ webagg.open_in_browser: True
 backend_fallback: True
 
 interactive: False
-toolbar:     toolbar2 ## None | toolbar2 ("classic" is deprecated)
+toolbar:     toolbar2 ## None | toolbar2  ("classic" is deprecated)
 timezone:    UTC      ## a pytz timezone string, e.g., US/Central or Europe/Paris
 
 #### Where your matplotlib data lives if you installed to a non-default location. This is where the matplotlib fonts, 
@@ -75,7 +75,7 @@ lines.scale_dashes:    True
 
 #### PATCHES -- see http://matplotlib.org/api/artist_api.html#module-matplotlib.patches for information on patch properties
 ## Patches are graphical objects that fill 2D space, like polygons or circles.  
-patch.linewidth:       0.5   ## edge width in points
+patch.linewidth:       0.25  ## edge width in points
 patch.facecolor:       C0    ## facecolor of the patch object
 patch.edgecolor:       black ## if forced, or patch is not filled
 patch.force_edgecolor: False ## True to always use edgecolor
@@ -202,7 +202,7 @@ mathtext.rm:             sans
 mathtext.tt:             monospace
 mathtext.it:             sans:italic
 mathtext.bf:             sans:bold
-mathtext.sf:             Times New Roman
+mathtext.sf:             sans
 mathtext.fontset:        dejavusans ## should be 'dejavusans' (default), 'dejavuserif', 'cm' (Computer Modern), 'stix', 
                                     ## 'stixsans' or 'custom'
 mathtext.fallback_to_cm: True       ## when True, use symbols from the Computer Modern fonts when a symbol can not be found 
@@ -213,7 +213,7 @@ mathtext.default:        it         ## the default font to use for math; can be 
 #### AXES -- see http://matplotlib.org/api/axes_api.html#module-matplotlib.axes 
 axes.facecolor:                  white  ## axes background color
 axes.edgecolor:                  black  ## axes edge color
-axes.linewidth:                  0.5    ## edge linewidth
+axes.linewidth:                  0.25   ## edge linewidth
 axes.grid:                       False  ## display grid or not
 axes.grid.axis:                  both   ## which axis the grid should apply to
 axes.grid.which:                 major  ## gridlines at major, minor or both ticks
@@ -270,9 +270,9 @@ xtick.top:           True   ## draw ticks on the top side
 xtick.bottom :       True   ## draw ticks on the bottom side
 xtick.labeltop:      False  ## draw label on the top
 xtick.labelbottom :  True   ## draw label on the bottom
-xtick.major.size:    3.5    ## major tick size in points
+xtick.major.size:    2.5    ## major tick size in points
 xtick.minor.size:    2      ## minor tick size in points
-xtick.major.width:   0.5    ## major tick width in points
+xtick.major.width:   0.25   ## major tick width in points
 xtick.minor.width:   0.6    ## minor tick width in points
 xtick.major.pad:     3.5    ## distance to major tick label in points
 xtick.minor.pad:     3.4    ## distance to the minor tick label in points
@@ -290,9 +290,9 @@ ytick.left:          True   ## draw ticks on the left side
 ytick.right:         True   ## draw ticks on the right side
 ytick.labelleft:     True   ## draw tick labels on the left side
 ytick.labelright:    False  ## draw tick labels on the right side
-ytick.major.size:    3.5    ## major tick size in points
+ytick.major.size:    2.5    ## major tick size in points
 ytick.minor.size:    2      ## minor tick size in points
-ytick.major.width:   0.5    ## major tick width in points
+ytick.major.width:   0.25   ## major tick width in points
 ytick.minor.width:   0.6    ## minor tick width in points
 ytick.major.pad:     3.5    ## distance to major tick label in points
 ytick.minor.pad:     3.4    ## distance to the minor tick label in points
@@ -317,7 +317,7 @@ legend.loc:            upper right ## legend location
 legend.frameon :       True        ## if True, draw the legend on a background patch
 legend.framealpha:     1           ## legend patch transparency
 legend.facecolor:      inherit     ## inherit from axes.facecolor; or color spec
-legend.edgecolor:      0.8         ## background patch boundary color
+legend.edgecolor:      0.5         ## background patch boundary color
 legend.fancybox:       True        ## if True, use a rounded box for the legend background, else a rectangle
 legend.shadow:         False       ## if True, give background a shadow effect
 legend.numpoints:      1           ## the number of marker points in the legend line

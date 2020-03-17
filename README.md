@@ -37,7 +37,7 @@ The following settings have been modified in comparison to the matplotlib defaul
 
 ### Figure and axes:
 
-* Figure size (**figure.figsize**): changed from ```6.4 x 4.8``` inches to ```3.5 x 1.75``` inches. This figure size may seem too small in a matplotlib window; however, it is the ideal size for double-column articles (assuming letter paper size). You may need to adjust the  height value when creating the figure object according to your data:
+* Figure size (**figure.figsize**): changed from ```6.4 x 4.8``` inches to ```3.5 x 1.75``` inches. This new figure size may seem too small in a matplotlib window; however, it is the ideal size for double-column articles (assuming letter paper size). You may need to adjust the figure height when creating the figure object according to your data:
 ```python 
 plt.figure(figsize=(3.5, new_height))
 ```
@@ -51,33 +51,35 @@ Note that using any of the lines of code above, the ```figsize``` property chang
 
 * Tight layout (**figure.constrained_layout.use**): changed from ```False``` to ```True```. It adjusts all plots elements so that the white space between the axes and the figure frame is reduced; i.e., the plot itself ocuppies all available space in the figure window. The amount of horizontal and vertical padding is controlled by **figure.constrained_layout.h_pad** and **figure.constrained_layout.w_pad**, respectively, which were changed from ```0.04167``` inches (3 points) to ```0.01389``` inches (1 point);
 
-* Axis spines width (**axes.linewidth**): changed from ```0.8``` to ```0.5``` points;
+* Axis spines width (**axes.linewidth**): changed from ```0.8``` to ```0.25``` point;
 
 * Resolution for saving the figure (**savefig.dpi**): changed from ```figure``` (which inherits the resolution from the figure object -- 100 dots per inch) to ```600``` dots per inch;
 
-* File format for saving figures (**savefig.format**): changed from ```png``` to ```pdf``` (this parameter is used only if ```fname``` in ```plt.savefig()``` does not contain a file extension and ```format=None```).
+* File format for saving the figure (**savefig.format**): changed from ```png``` to ```pdf``` (this parameter is used only if ```fname``` in ```plt.savefig()``` does not contain a file extension and ```format=None```).
 
 ### Plots:
 
-* Lines width (**lines.linewidth**): changed from ```1.5``` to ```0.75``` points;
+* Lines width (**lines.linewidth**): changed from ```1.5``` to ```0.75``` point;
 
-* Markers edge width (**lines.markeredgewidth**): changed from ```1.0``` to ```0.2``` points;
+* Markers edge width (**lines.markeredgewidth**): changed from ```1.0``` to ```0.2``` point;
 
-* Patch frame width (**patch.linewidth**): changed from ```1.0``` to ```0.5``` points (this parameter also controls the line width of the legend frame);
+* Patch frame width (**patch.linewidth**): changed from ```1.0``` to ```0.25``` point (this parameter also controls the line width of the legend frame);
 
-* Hatch line width (**hatch.linewidth**): changed from ```1.0``` to ```0.75``` points.
+* Hatch line width (**hatch.linewidth**): changed from ```1.0``` to ```0.75``` point.
 
 ### Legend: 
 
-* Legend location (**legend.loc**): changed from ```best``` to ```upper right``` (it may provide faster rendering for figures with many graphs);
+* Legend location (**legend.loc**): changed from ```best``` to ```upper right``` (it may provide faster rendering for figures with many graphs or data points);
 
-* Legend frame transparency (**legend.framealpha**): changed from ```0.8``` to ```1.0``` (i.e., no background elements are seen through the legend background);
+* Legend frame transparency (**legend.framealpha**): changed from ```0.8``` to ```1.0``` (i.e., no background elements are seen through the legend frame);
+
+* Legend edge color (**legend.edgecolor**): changed from ```0.8``` to ```0.5``` (i.e., a darker gray);
 
 * Legend font size (**legend.fontsize**): changed from ```medium``` to ```small```;
 
-* Whitespace inside the legend border (**legend.borderpad**): changed from ```0.4``` to ```0.3``` points;
+* Whitespace inside the legend border (**legend.borderpad**): changed from ```0.4``` to ```0.3``` point;
 
-* Vertical space between legend entries (**legend.labelspacing**): changed from ```0.5``` to ```0.3``` points.
+* Vertical space between legend entries (**legend.labelspacing**): changed from ```0.5``` to ```0.3``` point.
 
 #### Side note:
 
@@ -88,12 +90,7 @@ plt.legend(borderaxespad=0, edgecolor='k', fancybox=False)
 
 ### Grids and ticks:
 
-* Display major grids (**axes.grid**): changed from ```False``` to ```True```; to turn off the grids for a specific figure, insert the following line of code after the figure creation:
-```python
-plt.grid(False)
-```
-
-* Grid line width (**grid.linewidth**): changed from ```0.8``` to ```0.5``` points;
+* Grid line width (**grid.linewidth**): changed from ```0.8``` to ```0.5``` point;
 
 * Grid transparency (**grid.alpha**): changed from ```1.0``` to ```0.3```;
 
@@ -104,7 +101,9 @@ plt.gca().tick_params(top=False) # turn off ticks only on top spine
 plt.gca().tick_params(right=False) # turn onff ticks only on right spine
 ```
 
-* Major ticks width (**xtick.major.width** and **ytick.major.width**): changed from ```0.8``` to ```0.5``` points;
+* Major ticks width (**xtick.major.width** and **ytick.major.width**): changed from ```0.8``` to ```0.25``` point;
+
+* Major ticks size (**xtick.major.size** and **ytick.major.size**): changed from ```3.5``` to ```2.5``` points;
 
 * Ticks direction (**xtick.direction** and **ytick.direction**): changed from ```out``` to ```in```.
 

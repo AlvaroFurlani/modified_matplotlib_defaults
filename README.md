@@ -18,19 +18,21 @@ Moreover, the default matplotlib default settings can be restored through:
 plt.rcdefaults()
 ```
 
-Note 2: the same modifications to the matplotlib default settings could be obtained by inserting the code below (not all default changes are reflected in this line of code) instead of ```rc_file()```, although it is less straightforward and more error-prone:
+Note 2: the same modifications to the matplotlib default settings could be obtained by inserting the code below instead of ```rc_file()```, although it is less straightforward and more error-prone:
 ```python
 plt.rcParams.update({'figure.figsize': (3.5, 1.75), 'figure.constrained_layout.use': True, 
                      'figure.constrained_layout.h_pad': 0.01389, 'figure.constrained_layout.w_pad': 0.01389,
-                     'axes.linewidth': 0.5, 'axes.grid': True,
-                     'savefig.dpi': 600, 'savefig.format': 'pdf',
-                     'lines.linewidth': 0.75, 'lines.markeredgewidth': 0.2,
-                     'patch.linewidth': 0.5,
-                     'legend.loc': 'upper right', 'legend.framealpha': 1,
+                     'axes.linewidth': 0.25, 'savefig.dpi': 600, 'savefig.format': 'pdf',
+                     'lines.linewidth': 0.75, 'lines.markeredgewidth': 0.2, 
+                     'patch.linewidth': 0.25, 'hatch.linewidth': 0.75,
+                     'legend.loc': 'upper right', 'legend.framealpha': 1, 'legend.edgecolor': '0.5', 
+                     'legend.fontsize': 'small', 'legend.borderpad': 0.3, 'legend.labelspacing': 0.3,
                      'grid.linewidth': 0.5, 'grid.alpha': 0.3, 
-                     'xtick.direction': 'in', 'xtick.top': True, 'xtick.major.width': 0.5,
-                     'ytick.direction': 'in', 'ytick.right': True, 'ytick.major.width': 0.5
-                     'font.family': 'serif', 'font.size': 6})
+                     'xtick.direction': 'in', 'xtick.top': True, 
+                     'xtick.major.width': 0.25, 'xtick.major.size': 2.5,
+                     'ytick.direction': 'in', 'ytick.right': True, 
+                     'ytick.major.width': 0.25, 'ytick.major.size': 2.5,
+                     'font.family': 'serif', 'font.serif': 'Times New Roman', 'font.size': 8})   
 ```
 
 The following settings have been modified in comparison to the matplotlib default values:

@@ -1,8 +1,8 @@
 # Modified matplotlib default settings
 
-The file *my_mpl_settings* given in this repository is a configuration file that contains modified matplotlib settings for creating publication-ready plots. Download this file, and include it in a directory accessible by the Python file(s) used for producing the plots. The values in this file override the default settings in the file *matplotlibrc* until the kernel is restarted or the default settings are restored. Obviously, this modified settings can also be overriden for individual plots (more on this later).
+The file *my_mpl_settings* given in this repository is a configuration file that contains modified matplotlib settings for creating publication-ready plots. Download this file and include it in a directory accessible by the Python file(s) used for producing the plots. The values in this file override the default settings in the file *matplotlibrc* until the kernel is restarted or the default settings are restored. Obviously, this modified settings can also be overriden for individual plots (more on this later).
 
-Using this approach to modify plotting settings is especially useful when working on multiple projects, and a different set of defaults is applied to each one. In this way, the default values are easily modified for all plots in a given project, and reproducibility is guaranteed when producing the plots in different environments and/or at another time.
+Using this approach to modify plotting settings is especially useful when working on multiple projects, and a different set of defaults is applied to each one of them. In this way, the default values are easily modified for all plots in a given project, and reproducibility is guaranteed when producing the plots in different environments and/or at a later time.
 
 Note 1: the description below adopts the following convention:
 ```python
@@ -11,7 +11,7 @@ from matplotlib import rc_file
 rc_file('my_mpl_settings') # file containing your settings (include path if not located in the current directory)
 ```
 
-The modifications to the default values shown in this repository represent my personal preferences; you may need to modify it further to adapt to your own needs/preferences. If you do change any setting in the file *my_mpl_settings*, make sure to run the line of code ```rc_file()``` again so that the modifications are reflected in the subsequent plots.
+The modifications to the default values shown in this repository represent my personal preferences; you may need to modify it further to adapt to your own needs/preferences. Moreover, I have only modified the settings that has been relevant to my work up to now; more modifications may be made in the future as needed. If you do change any setting in the file *my_mpl_settings*, make sure to run the line of code ```rc_file()``` again so that the modifications are reflected in the subsequent plots.
 
 Moreover, the default matplotlib default settings can be restored through:
 ```python

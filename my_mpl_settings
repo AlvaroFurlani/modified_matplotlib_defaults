@@ -195,7 +195,7 @@ text.hinting_factor: 8 ## Specifies the amount of softness for hinting in the ho
 text.antialiased: True ## if True (default), the text will be antialiased; this only affects the Agg backend.
 
 ## The following settings allow you to select the fonts in math mode. They map from a TeX font name to a fontconfig font 
-## pattern. These settings are only used if mathtext.fontset is 'custom'. Note that this "custom" mode is unsupported and may 
+## pattern. These settings are only used if mathtext.fontset is 'custom'. Note that this 'custom' mode is unsupported and may 
 ## go away in the future.
 mathtext.cal:            cursive
 mathtext.rm:             sans
@@ -203,12 +203,12 @@ mathtext.tt:             monospace
 mathtext.it:             sans:italic
 mathtext.bf:             sans:bold
 mathtext.sf:             sans
-mathtext.fontset:        dejavusans ## should be 'dejavusans' (default), 'dejavuserif', 'cm' (Computer Modern), 'stix', 
-                                    ## 'stixsans' or 'custom'
-mathtext.fallback_to_cm: True       ## when True, use symbols from the Computer Modern fonts when a symbol can not be found 
-                                    ## in one of the custom math fonts
-mathtext.default:        it         ## the default font to use for math; can be any of the LaTeX font names, including the 
-                                    ## special name "regular" for the same font used in regular text
+mathtext.fontset:        cm   ## should be 'dejavusans' (default), 'dejavuserif', 'cm' (Computer Modern), 'stix', 
+                              ## 'stixsans' or 'custom'
+mathtext.fallback_to_cm: True ## when True, use symbols from the Computer Modern fonts when a symbol can not be found 
+                              ## in one of the custom math fonts
+mathtext.default:        it   ## the default font to use for math; can be any of the LaTeX font names, including the 
+                              ## special name "regular" for the same font used in regular text
 
 #### AXES -- see http://matplotlib.org/api/axes_api.html#module-matplotlib.axes 
 axes.facecolor:                  white  ## axes background color

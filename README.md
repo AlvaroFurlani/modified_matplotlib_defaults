@@ -32,7 +32,8 @@ plt.rcParams.update({'figure.figsize': (3.5, 1.75), 'figure.constrained_layout.u
                      'xtick.major.width': 0.25, 'xtick.major.size': 2.5,
                      'ytick.direction': 'in', 'ytick.right': True, 
                      'ytick.major.width': 0.25, 'ytick.major.size': 2.5,
-                     'font.family': 'serif', 'font.serif': 'Times New Roman', 'font.size': 8})   
+                     'font.family': 'serif', 'font.serif': 'Times New Roman', 'font.size': 8,
+                     'mathtext.fontset': 'cm'})   
 ```
 
 The following settings have been modified in comparison to the matplotlib default values:
@@ -115,4 +116,6 @@ plt.gca().tick_params(right=False) # turn onff ticks only on right spine
 
 * Text font style for the ```serif``` family (**font.serif**): changed from ```DejaVu``` to ```Times New Roman```;
 
-* Text font size (**font.size**): changed from ```10``` to ```8``` points.
+* Text font size (**font.size**): changed from ```10``` to ```8``` points;
+
+* LaTeX font style (**mathtext.fontset**): change from ```dejavusans``` to ```cm```.

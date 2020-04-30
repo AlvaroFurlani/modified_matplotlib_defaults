@@ -97,7 +97,7 @@ plt.legend(borderaxespad=0, edgecolor='k', fancybox=False)
 
 * Grid transparency (**grid.alpha**): changed from ```1.0``` to ```0.3```;
 
-* Draw ticks on the top and right spines (**xtick.top** and **ytick.rigth**): changed from ```False``` to ```True```; to turn off this behavior for a specific figure, insert one the following lines of code after the figure creation:
+* Draw ticks on the top and right spines (**xtick.top** and **ytick.right**): changed from ```False``` to ```True```; to turn off this behavior for a specific figure, insert one the following lines of code after the figure creation:
 ```python
 plt.gca().tick_params(top=False, right=False) # turn off ticks on both top and right spines
 plt.gca().tick_params(top=False) # turn off ticks only on top spine

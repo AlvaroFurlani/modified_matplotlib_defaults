@@ -50,7 +50,7 @@ where ```new_height``` is the desired figure height, in inches. If your figure s
 plt.figure(figsize=(7.0625, new_height))
 ```
 
-Note that using any of the lines of code above, the ```figsize``` property changes only for the current figure; the modified default settings in the file *my_mpl_settings* remain unchanged (i.e., the ```figsize``` property is overriden only locally). Analogous comment is valid for the other parameters described next.
+Note that using any of the lines of code above, the ```figsize``` property changes only for the current figure; the modified default settings in the file *my_mpl_settings* remain unchanged (i.e., the ```figsize``` property is overridden only locally). Analogous comment is valid for the other parameters described next.
 
 * Tight layout (**figure.constrained_layout.use**): changed from ```False``` to ```True```. It adjusts all plots elements so that the white space between the axes and the figure frame is reduced; i.e., the plot itself ocuppies all available space in the figure window. The amount of horizontal and vertical padding is controlled by **figure.constrained_layout.h_pad** and **figure.constrained_layout.w_pad**, respectively, which were changed from ```0.04167``` inches (3 points) to ```0.01389``` inches (1 point);
 
